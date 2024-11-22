@@ -1,0 +1,3 @@
+1. reprojection时cuda内存不够：把batch size改小为16，注意训练时不能太小否则会loss不稳定，不是持续下降（64比较合适）
+
+2. sitk保存图片报错：保存numpy数组前要先加一步sitk.GetImageFromArray
