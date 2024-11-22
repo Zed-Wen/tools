@@ -1,0 +1,42 @@
+{
+  "file": {
+    "h": 1086,
+    "w": 1086,
+    "L": 363,
+    "num_dv": 640
+  },
+  "train_fit": {
+    "lr": 1e-3,
+    "epoch": 500,
+    "summary_epoch": 50,
+    "lr_decay_epoch": 50,
+    "lr_decay_coefficient": 0.5,
+    "batch_size": 1023
+  },
+  "train_refine": {
+    "lr": 1e-3,
+    "epoch": 20000,
+    "summary_epoch": 10,
+    "lr_decay_epoch": 500,
+    "lr_decay_coefficient": 0.5,
+    "sample_N": 10,
+    "batch_size": 16
+  },
+  "encoding": {
+    "otype": "Grid",
+    "type": "Hash",
+    "n_levels": 13,
+    "n_features_per_level": 8,
+    "log2_hashmap_size": 21,
+    "base_resolution": 2,
+    "per_level_scale": 2,
+    "interpolation": "Linear"
+  },
+  "network": {
+    "otype": "FullyFusedMLP",
+    "activation": "leakyReLU",
+    "output_activation": "None",
+    "n_neurons": 128,
+    "n_hidden_layers": 5
+  }
+}

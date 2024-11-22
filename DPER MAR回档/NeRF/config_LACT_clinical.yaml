@@ -1,0 +1,42 @@
+file:
+    h: 1085
+    w: 1085
+    recon_size: 512
+
+train_fit:
+    lr: 0.001
+    epoch: 150
+    summary_epoch: 150
+    lr_decay_epoch: 100
+    lr_decay_coefficient: 0.5
+    batch_size: 1023
+
+train_refine:
+    lr: 0.0001
+    epoch: 200
+    summary_epoch: 200
+    lr_decay_epoch: 500
+    lr_decay_coefficient: 0.5
+    sample_N: 10
+    batch_size: 16
+
+xray_sampling:
+    num_sample_views: 16
+    num_sample_rays: 10
+
+encoding:
+    otype: Grid
+    type: Hash
+    n_levels: 13
+    n_features_per_level: 8
+    log2_hashmap_size: 21
+    base_resolution: 2
+    per_level_scale: 2
+    interpolation: Linear
+
+network:
+    otype: FullyFusedMLP
+    activation: leakyReLU
+    output_activation: None
+    n_neurons: 128
+    n_hidden_layers: 5
